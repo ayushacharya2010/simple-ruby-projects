@@ -1,7 +1,7 @@
 # def convert_to_cypher(string)
 def convert_to_cypher(string, increment)
   # putting increment in mod26 (num of letters in alphabet)
-  increment %= 26
+  increment = increment.to_i % 26
   # break string into array of individual characters
   string_array = string.split("")
   # iterate over string array & store result in variable
@@ -32,3 +32,4 @@ def convert_to_cypher(string, increment)
   end
   mapped_string_array.join("")
 end
+
