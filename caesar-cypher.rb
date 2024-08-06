@@ -33,3 +33,8 @@ def convert_to_cypher(string, increment)
   mapped_string_array.join("")
 end
 
+puts "Welcome to this caesar cypher encoder! Type in the text you would like to encode:"
+string = gets
+puts "By how many letters do you want to offset the text? Type in the number here:"
+increment = gets
+puts "The encoded text reads: #{convert_to_cypher(string, increment)}"
