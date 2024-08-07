@@ -11,13 +11,8 @@ substrings =
 def get_substrings(string, substrings) 
   result = {}
   substrings.each do |substring|
-    contains_substring = string.include?(substring)
-    if contains_substring == true
       substring_count = string.scan(substring).length
-      result[substring] = substring_count
-    else
-      next
-    end
+      substring_count > 0 ? result[substring] = substring_count : next
   end
   result
 end
