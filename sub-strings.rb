@@ -8,7 +8,7 @@ substrings =
 "when", "them", "then", "many", "some", "like", "just", "good", 
 "time", "take", "come"]
 
-def get_substrings(string, substrings) 
+def get_substrings(substrings, string)
   result = {}
   substrings.each do |substring|
       substring_count = string.scan(substring).length
@@ -17,4 +17,6 @@ def get_substrings(string, substrings)
   result
 end
 
-puts get_substrings("combination", substrings)
+print "What text would you like to get the substrings of? Enter here: "
+string = gets.chomp.to_s
+puts get_substrings(substrings, string)
