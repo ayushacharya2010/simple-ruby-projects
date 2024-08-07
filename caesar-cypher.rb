@@ -1,7 +1,7 @@
 # def convert_to_cypher(string)
 def convert_to_cypher(string, increment)
   # putting increment in mod26 (num of letters in alphabet)
-  increment = increment.to_i % 26
+  increment = increment % 26
   # break string into array of individual characters
   string_array = string.split("")
   # iterate over string array & store result in variable
@@ -36,5 +36,5 @@ end
 puts "Welcome to this caesar cypher encoder! Type in the text you would like to encode:"
 string = gets
 puts "By how many letters do you want to offset the text? Type in the whole number here:"
-increment = gets
+increment = gets.to_i
 puts "The encoded text reads: #{convert_to_cypher(string, increment)}"
