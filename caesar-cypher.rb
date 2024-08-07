@@ -26,15 +26,20 @@ def convert_to_cypher(string, increment)
       character_ascii = lowered_character_ascii + 97
     # if character is not a letter
     else
+      # return unchanged character
       character
     end
+    # convert updated ASCII value back to character 
     character_ascii.chr
   end
+  # join string array back together into a string for readability after changes
   mapped_string_array.join("")
 end
 
+# interactive user input
 puts "Welcome to this caesar cypher encoder! Type in the text you would like to encode:"
 string = gets
 puts "By how many letters do you want to offset the text? Type in the integer here:"
 increment = gets.to_i
+# output of cypher
 puts "The encoded text reads: #{convert_to_cypher(string, increment)}"
