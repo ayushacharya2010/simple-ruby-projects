@@ -7,3 +7,19 @@ substrings =
 "from", "have", "this", "they", "will", "your", "know", "what", 
 "when", "them", "then", "many", "some", "like", "just", "good", 
 "time", "take", "come"]
+
+def get_substrings(string, substrings) 
+  result = {}
+  substrings.each do |substring|
+    contains_substring = string.include?(substring)
+    if contains_substring == true
+      substring_count = string.scan(substring).length
+      result[substring] = substring_count
+    else
+      next
+    end
+  end
+  result
+end
+
+puts get_substrings("combination", substrings)
